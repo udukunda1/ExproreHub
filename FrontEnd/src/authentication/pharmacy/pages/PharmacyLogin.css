@@ -1,32 +1,38 @@
-.pharmacy-login {
+.student-signup {
     /* background: blue; */
     min-height: 60vh;
-    margin-left: 30%;
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin: 0 150px;
 }
 
-.pharmacy-login p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #273B68;
-}
-
-.pharmacy-login .message {
-    color: white;
-}
-
-.pharmacy-login form {
+.student-signup form {
     display: flex;
     flex-direction: column;
     /* background: red; */
     width: 50%;
 }
+.student-signup p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #273B68;
+}
 
-.pharmacy-login form input {
+.student-signup .message {
+    color: white;
+}
+
+[data-theme="dark"] {
+    .student-signup p, .student-signup form label {
+        color: white;
+    }
+}
+
+
+.student-signup form input {
     width: 100%;
     margin: 1rem 0;
     height: 2rem;
@@ -38,24 +44,18 @@
     box-shadow: 0 0 2px var(--dark-green);
 }
 
-.pharmacy-login form input:focus {
+.student-signup form input:focus {
     box-shadow: 0 0 5px var(--dark-green);
 }
 
-.pharmacy-login form label {
+.student-signup form label {
     font-size: medium;
     font-weight: bold;
     font-style: italic;
 }
 
-.pharmacy-login #button {
+.student-signup #button {
     width: 50%;
     align-self: center;
     margin: 2rem 0;
-}
-
-[data-theme="dark"] {
-    .pharmacy-login p, .pharmacy-login form label {
-        color: white;
-    }
 }

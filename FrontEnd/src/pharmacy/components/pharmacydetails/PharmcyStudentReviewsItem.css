@@ -1,11 +1,11 @@
 .PharmcyStudentReviewsItem {
     min-height: 10rem;
     width: 23vw;
-    border: 0 solid #1FCEBF; /* changed */
+    border: 0 solid #EB5B00; /* changed */
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    box-shadow: 0 0 3px #1FCEBF; /* changed */
+    box-shadow: 0 0 3px #EB5B00; /* changed */
     margin-bottom: 1rem;
 }
 
@@ -32,14 +32,14 @@
 .PharmcyStudentReviewsItem__heading--image {
     width: 3rem;
     height: 3rem;
-    background: #1FCEBF;
+    background: #EB5B00;
     border-radius: 50%;
     margin: 0.5rem 0.7rem;
     overflow: hidden;       /* Hide overflow to keep the image within the circle */
     display: flex;          /* Center the image */
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--dark-green);
+    border: 1px solid #EB5B00;
 }
 
 .PharmcyStudentReviewsItem__heading--image img {

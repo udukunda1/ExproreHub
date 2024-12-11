@@ -31,7 +31,8 @@ function Navbar() {
             <div className='nav-lists__links'>
             <li className="nav-list"><NavLink to="/" className={({isActive}) => isActive? 'link active' : 'link'} end>Home</NavLink></li>
             <li className="nav-list"><NavLink to="/directory" className={({isActive}) => isActive? 'link active' : 'link'}>Pharmacy directory</NavLink></li>
-            <li className="nav-list"><NavLink to="/search" className={({isActive}) => isActive? 'link active' : 'link'}>Med availability Search</NavLink></li>
+            <li className="nav-list"><NavLink to="/search" className={({isActive}) => isActive? 'link active' : 'link'}>Search</NavLink></li>
+            <li className="nav-list"><NavLink to="/share" className={({isActive}) => isActive? 'link active' : 'link'}>Share Place</NavLink></li>
             {/* <li className="nav-list"><NavLink to="/searc" className={({isActive}) => isActive? 'link active' : 'link'}>FAQ</NavLink></li> */}
             {!auth.isLoggedIn ? <li className="nav-list"><Link to="/authenticate/student/"><Button>Login</Button></Link></li> : <Button type='a' className='cta-white' onClick={handleLogout}>Logout</Button>}
             {/* <img src={settings} alt='setting' /> */}

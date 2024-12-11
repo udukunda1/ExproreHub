@@ -22,7 +22,7 @@
 .searchable-list input {
     width: 35vw;
     padding: 0.75rem;
-    border: 1px solid #1FCEBF;
+    border: 1px solid #D91656;
     border-radius: 6px;
     color: var(--dark-green);
     font: inherit;
@@ -30,7 +30,7 @@
 
   .searchable-list input:focus {
     outline: none;
-    border: 2px solid #1FCEBF;
+    border: 2px solid #D91656;
   }
 
   .content-before-typing {
@@ -42,20 +42,20 @@
   }
 
   .conten-after-typing span {
-    color: var(--dark-green);
+    color: black;
   }
 
   .conten-after-typing h2 {
     padding-top: 1rem;
-    color: #6B3AEA;
+    color: #EB5B00;
   }
 
   [data-theme="dark"] {
     .content-before-typing h2{
-      color: #1FCEBF;
+      color: #D91656;
     }
     .content-before-typing div{
-      color: #1FCEBF;
+      color: #D91656;
     }
     .conten-after-typing span {
       color: white;

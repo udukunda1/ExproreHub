@@ -43,7 +43,6 @@ function Home() {
       <>
       {navigation.state === 'loading' && <LoadingSpinner asOverlay />}
       <ImageHolder />
-      <h2>xhecjjjjj</h2>
         <div className='actions'>
         <div className='item one'>
           <div className='content'>

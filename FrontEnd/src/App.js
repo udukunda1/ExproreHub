@@ -17,6 +17,7 @@ import PharmacyLogin from './authentication/pharmacy/pages/PharmacyLogin';
 import PharmacySignUp from './authentication/pharmacy/pages/PharmacySignUp';
 import ContextProvider from './shared/context/auth-context';
 import PharmaContextProvider from './shared/context/pharma-auth-context';
+import SharePlace from './pharmacy/pages/shareplace/SharePlace';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       {path: 'directory', element: <Directory />, loader: dloader},
       {path: 'directory/details/:pharmacyId', element: <PharmacyDetails />, loader: ploader},
       {path: 'search', element: <AvailabilitySearch />, loader: dloader},
+      {path: 'share', element: <SharePlace />},
       {
         path: 'authenticate',
         element: <AuthenticateLayout />,

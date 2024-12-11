@@ -147,7 +147,7 @@ function PharmacyDetails() {
             </div>
             </div>
             <div className='pharmacy-details__reviews'>
-            <h2>Students reviews</h2>
+            <h2>Visitors reviews</h2>
                <PharmcyStudentReviews reviews={pharmacy.studentReviews} />
             </div>
         </div>

@@ -28,7 +28,7 @@
 }
 
 .pharmacy-details__head {
-    border: 0.89px solid #1FCEBF;
+    border: 0.89px solid #EB5B00;
     width: 100%;
     height: 17vh;
     display: flex;
@@ -161,7 +161,7 @@
 .pharmacy-details__reviews h2 {
     text-align: center;
     padding-bottom: 52px;
-    color: #005450;
+    color: #D91656;
 }
 
 [data-theme="dark"] {
@@ -169,7 +169,7 @@
         color: white;
     }
     .pharmacy-details__reviews h2 {
-        color: #1FCEBF;
+        color: #D91656;
     }
 }
 

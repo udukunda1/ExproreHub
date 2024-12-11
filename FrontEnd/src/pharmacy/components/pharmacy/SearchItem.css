@@ -55,23 +55,23 @@
 
 .search-item-card__content h3,
 .search-item-card__content h4 {
-    color: #005450;
+    color: #D91656;
 }
 
 [data-theme="dark"] {
     .search-item-card__content h3,
     .search-item-card__content h4 {
-    color: #1FCEBF;
+    color: #D91656;
 }
 .search-item-card__content .others {
-    color: #1FCEBF;
+    color: #D91656;
 }
 .search-item-card:hover {
-    box-shadow: 0 0 10px #1FCEBF;
+    box-shadow: 0 0 10px #D91656;
 }
 
 .search-item-card {
-    box-shadow: 0 0 5px #1FCEBF;
+    box-shadow: 0 0 5px #D91656;
 }
 
 .search-item-card__content {
@@ -98,6 +98,6 @@
 }
 
 .search-item-card__content .others {
-    color: var(--dark-green);
+    color: #D91656;
     font-weight: 600;
 }

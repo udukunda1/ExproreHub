@@ -1,48 +1,54 @@
-import { useContext, useRef, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { pharmaAuthContext } from '../../../shared/context/pharma-auth-context';
-import useOpenModal from '../../../shared/hooks/useOpenModal';
-import Modal from '../../../shared/components/UI/Modal/modal';
-import LoadingSpinner from '../../../shared/components/UI/loadingspinner/LoadingSpinner'
+//student signup
 
+import { Form, useNavigate } from "react-router-dom";
 import Button from "../../../shared/components/UI/Button/Button";
-import './PharmacyLogin.css';
-import { path } from '../../../shared/utils/imagePath';
+import './PharmacySignUp.css';
+import { useContext, useEffect, useRef, useState } from "react";
+import { authContext } from "../../../shared/context/auth-context";
+import useOpenModal from "../../../shared/hooks/useOpenModal";
+import Modal from "../../../shared/components/UI/Modal/modal";
+import LoadingSpinner from "../../../shared/components/UI/loadingspinner/LoadingSpinner";
+import { path } from "../../../shared/utils/imagePath";
 
-function PharmacyLogin(){
-    const auth = useContext(pharmaAuthContext);
-    const phoneRef = useRef();
-    const pssRef = useRef();
-    const [isLoading, setIsLoading] = useState(false);
+function StudentSignUp(){
+    const name = useRef();
+    const email = useRef();
+    const file = useRef();
+    const password = useRef();
+    const confirmPassword = useRef();
+    const [isLoading, setIsLoading] = useState();
     const [logData, setLogData] = useState({err: ''});
+    const auth = useContext(authContext);
     const navigate = useNavigate();
     const [modalRef, openModal] = useOpenModal();
 
     function handleSubmit(event){
         event.preventDefault();
 
-        async function loginData(){
+        async function signUp(){
             try{
+                const formData = new FormData();
+                formData.append('name', name.current.value);
+                formData.append('email', email.current.value);
+                formData.append('picture', file.current.files[0]);
+                formData.append('password', password.current.value);
+                formData.append('confirmPassword', confirmPassword.current.value);
                 setIsLoading(true);
-            const response = await fetch(`${path}/pharma/login`,{
+            const response = await fetch(`${path}/users/signup`,{
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({number: phoneRef.current.value, password: pssRef.current.value})
+                body: formData
             })
 
             const resData = await response.json();
             setIsLoading(false);
 
             setLogData(resData);
-            // console.log(resData);
 
             if(resData.err){
                 return;
             }
             auth.login(resData);
-            navigate(`/pharmadashboard/${resData.id}`);
+            navigate('/');
             }
             catch {
                 setIsLoading(false);
@@ -50,7 +56,7 @@ function PharmacyLogin(){
             }
         }
 
-        loginData();
+        signUp();
     }
 
     useEffect(() => {
@@ -60,21 +66,27 @@ function PharmacyLogin(){
       }, [logData, openModal])
 
     return (
-        <div className="pharmacy-login">
-        {isLoading && <LoadingSpinner asOverlay />}
+        <div className="student-signup">
         <Modal  ref={modalRef}>
         <p className='message'>{logData.err}</p>
         </Modal>
-        <p>Pharmacy login</p>
-        <form>
-            <label htmlFor='number'>Phone Number</label>
-            <input type="number" id="number" ref={phoneRef} required />
+        <p>student SignUp</p>
+        <Form>
+        {isLoading && <LoadingSpinner asOverlay />}
+            <label htmlFor='name'>Name</label>
+            <input ref={name} type="text" name="name" id="name" required />
+            <label htmlFor='email'>Email</label>
+            <input ref={email} type="email" name="email" id="email" required />
+            <label htmlFor='pic'>Picture</label>
+            <input ref={file} type="file" accept=".jpg,.png,.jpeg" name="file" id="pic" required />
             <label htmlFor='password'>Password</label>
-            <input type="password" id="Password" ref={pssRef} required />
-            <Button type='submit' id="button" onClick={handleSubmit}>Login</Button>
-        </form>
+            <input ref={password} type="password" name="password" id="Password" required />
+            <label htmlFor='confirmpassword'>Confirm Password</label>
+            <input ref={confirmPassword} type="password" name="confirmPassword" id="confirmPassword" required />
+            <Button type='submit' id="button" onClick={(event) => handleSubmit(event)} >SignUp</Button>
+        </Form>
         </div>
     )
 }
 
-export default PharmacyLogin;
+export default StudentSignUp;

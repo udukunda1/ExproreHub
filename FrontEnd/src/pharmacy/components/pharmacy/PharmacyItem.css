@@ -28,7 +28,7 @@
 }
 
 .pharmacy-card a{
-    color: var(--dark-green);
+    color: #D91656;
     text-decoration: none;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .pharmacy-card__content .title {
-    color: #1FCEBF;
+    color: #D91656;
     /* padding-bottom: 0.1rem; */
     font-size: 1.2rem;
     font-weight: bold;
@@ -78,7 +78,7 @@
         color: white;
     }
     .pharmacy-card {
-        border: 0.1px solid #1FCEBF;
+        border: 0.1px solid #D91656;
     }
 }
 

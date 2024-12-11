@@ -2,11 +2,11 @@
 .StudentExperienceItem {
     min-height: 10rem;
     width: 22.6vw;
-    border: 0 solid #1FCEBF; /* changed */
+    border: 0 solid #D91656; /* changed */
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    box-shadow: 0 0 3px #1FCEBF; /* changed */
+    box-shadow: 0 0 3px #640D5F; /* changed */
 }
 
 @media (max-width: 410px) {
@@ -26,14 +26,14 @@
 .StudentExperienceItem__heading--image {
     width: 3rem;
     height: 3rem;
-    background: #1FCEBF;
+    background: #D91656;
     border-radius: 50%;
     margin: 0.5rem 0.7rem;
     overflow: hidden;       /* Hide overflow to keep the image within the circle */
     display: flex;          /* Center the image */
     align-items: center;
     justify-content: center;
-    border: 1px solid #1FCEBF;
+    border: 1px solid #D91656;
 }
 
 .StudentExperienceItem__heading--image img {

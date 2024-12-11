@@ -1,0 +1,62 @@
+.pharmacy-signup {
+    /* background: #FFB200; */
+    /* border-radius: 50px; */
+    min-height: 60vh;
+    margin: 2rem auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pharmacy-signup p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #EB5B00;
+}
+
+.pharmacy-signup .message {
+    color: white;
+}
+
+[data-theme="dark"] {
+    .pharmacy-signup p, .pharmacy-signup form label {
+        color: white;
+    }
+}
+
+.pharmacy-signup form {
+    display: flex;
+    flex-direction: column;
+    /* background: red; */
+    width: 50%;
+}
+
+.pharmacy-signup form input {
+    width: 100%;
+    margin: 0.5rem 0;
+    height: 1.8rem;
+    outline: none;
+    font-family: inherit;
+    font-size: medium;
+    border: 1px solid #640D5F;
+    border-radius: 6px;
+    box-shadow: 0 0 1px #640D5F;
+}
+
+.pharmacy-signup form input:focus {
+    box-shadow: 0 0 2px #640D5F;
+}
+
+.pharmacy-signup form label {
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.pharmacy-signup #button {
+    width: 50%;
+    align-self: center;
+    margin: 2rem 0;
+}
