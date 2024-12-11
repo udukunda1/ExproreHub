@@ -10,6 +10,7 @@ function Footer() {
 
     return(
         <div className='footer'>
+            <h1>hhhh</h1>
             <div className='inner'>
                 <div className='inner__one'>
                     <div className='inner__one--one'>
