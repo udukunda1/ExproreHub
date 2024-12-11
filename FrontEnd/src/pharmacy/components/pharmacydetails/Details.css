@@ -1,0 +1,33 @@
+.datails-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.datails-container .item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.datails-container .item img {
+    margin-right: 0.3rem;
+}
+
+.datails-container .item1 {
+    color: #005450;
+}
+
+[data-theme="dark"] {
+    .datails-container .item1 {
+        color: #1FCEBF;
+    }
+    .datails-container .item2 {
+        color: white;
+    }
+    .datails-container .item3 {
+        color: white;
+    }
+    .pharmacy-details__reviews h2 {
+        color: #1FCEBF;
+    }
+}

@@ -1,0 +1,18 @@
+.side-drawer {
+    /* background: blueviolet; */
+    margin-right: 97px;
+}
+
+.side-drawer h3 {
+    color: #EB5B00;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 31px;;
+}
+
+[data-theme="dark"] {
+    .MuiDrawer-paper {
+        background: var(--dark-theme-1);
+    }
+}

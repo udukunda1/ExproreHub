@@ -1,0 +1,14 @@
+:root {
+    --dark-green: #0e4f1f;
+}
+
+[data-theme="dark"] {
+    --dark-theme-1: #0F1214;
+    --dark-theme-2: #212121;
+    --dark-theme-3: #3c3c3c;
+}
+
+
+ body{
+    background: var(--dark-theme-3);
+}

@@ -1,0 +1,38 @@
+.img__bg2 {
+    background: url('../../../image/image2\ eh.svg');
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    background-position:0% 50%;
+    padding: 17.5vh 0;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
+  }
+
+  .img__bg--item2 {
+    width: 25%;
+    height: 30vh;
+    background: white;
+    margin-left: 5% ;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    border-radius: 4px;
+  }
+
+  [data-theme="dark"] {
+    .img__bg--item2 {
+        background: var(--dark-theme-3);
+    }
+
+    .img__bg--item2 p {
+      color: white;
+  }
+}
+
+  .img__bg--item-title2 {
+    padding: 1rem 1rem;
+    color: #1FCEBF;
+    margin-left: 2rem;
+    font-weight: bold;
+  }
